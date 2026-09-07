@@ -1,5 +1,6 @@
 import QtQuick
 import Quickshell
+import qs.Commons
 import qs.Ui
 
 // Bar button for SparkDown. Left click toggles the Open / Open folder panel
@@ -55,18 +56,25 @@ BarWidget {
     }
   }
 
-  WidgetButton {
+  BarIconButton {
     id: button
     anchors.fill: parent
     bar: root.bar
-    text: "SD"
     tooltipText: "SparkDown"
+    iconComponent: Component {
+      Image {
+        anchors.fill: parent
+        source: Qt.resolvedUrl("assets/sparkdown-logo.svg")
+        fillMode: Image.PreserveAspectFit
+        sourceSize: Qt.size(Style.bar.iconCanvas, Style.bar.iconCanvas)
+      }
+    }
     onPressed: function(buttonCode) {
       if (!root.bar) return
-      if (buttonCode === Qt.RightButton) {
-        if (panelLoader.item) panelLoader.item.launchApp()
-      } else {
+      if (buttonCode === Qt.LeftButton) {
         root.toggle()
+      } else if (buttonCode === Qt.RightButton) {
+        if (panelLoader.item) panelLoader.item.launchApp()
       }
     }
   }
