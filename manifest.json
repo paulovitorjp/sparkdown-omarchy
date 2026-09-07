@@ -2,11 +2,14 @@
   "schemaVersion": 1,
   "id": "paulovitorjp.sparkdown",
   "name": "SparkDown",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "author": "Paulo Vitor Justino Pereira",
   "license": "MIT",
   "description": "Launch SparkDown from the Omarchy bar or a summoned menu: open the app, or pick a folder.",
-  "kinds": ["bar-widget", "menu"],
+  "kinds": [
+    "bar-widget",
+    "menu"
+  ],
   "entryPoints": {
     "barWidget": "BarWidget.qml",
     "menu": "Menu.qml"
