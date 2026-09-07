@@ -64,7 +64,7 @@ BarWidget {
     iconComponent: Component {
       Image {
         anchors.fill: parent
-        source: Qt.resolvedUrl("assets/sparkdown-logo.svg")
+        source: Qt.resolvedUrl("assets/sparkdown-app-icon.png")
         fillMode: Image.PreserveAspectFit
         sourceSize: Qt.size(Style.bar.iconCanvas, Style.bar.iconCanvas)
       }

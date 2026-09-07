@@ -2,9 +2,9 @@
 
 Omarchy shell plugin that **launches SparkDown** — it does not embed the editor
 in Quickshell. Left-click the bar widget for Open / Open folder; right-click
-opens the app immediately. The bar uses the SparkDown mark SVG (rounded dark
-tile with a blue bolt), not `SD` text. The same two actions are a summoned
-`menu`.
+opens the app immediately. The bar shows the SparkDown app icon (white lightning
+bolt on black), same as the in-app toolbar — not `SD` text. The same two actions
+are a summoned `menu`.
 
 Plugin id: `paulovitorjp.sparkdown` (not `omarchy.*`).
 
