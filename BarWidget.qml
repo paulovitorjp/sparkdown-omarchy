@@ -61,12 +61,14 @@ BarWidget {
     anchors.fill: parent
     bar: root.bar
     tooltipText: "SparkDown"
+    slotSize: Style.bar.statusSlot
     iconComponent: Component {
-      Image {
-        anchors.fill: parent
-        source: Qt.resolvedUrl("assets/sparkdown-app-icon.png")
-        fillMode: Image.PreserveAspectFit
-        sourceSize: Qt.size(Style.bar.iconCanvas, Style.bar.iconCanvas)
+      Item {
+        SparkDownBolt {
+          anchors.centerIn: parent
+          iconSize: Style.space(12)
+          color: button.foreground
+        }
       }
     }
     onPressed: function(buttonCode) {
